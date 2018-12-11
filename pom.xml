@@ -13,7 +13,9 @@
 
 	<parent>
 		<!-- default configuration for a spring boot project, this default is based 
-			on 80% of cases, it is opinionated framework -->
+			on 80% of cases, it is opinionated framework 
+			Parent informs maven what versions of jars to download
+			specified-->
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.4.2.RELEASE</version>
@@ -21,7 +23,8 @@
 
 	<dependencies>
 		<!-- meta dependency: which is like a parent dependency which pulls all 
-			the common thats are needed to start a spring boot application -->
+			the common jars thats are needed to start a spring boot application 
+			and this section informs maven which collections of jars to download-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
