@@ -1,5 +1,6 @@
 package com.mahdi.springbootstarter.topic;
 
+import java.lang.reflect.Method;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +37,11 @@ public class TopicController {
 	@RequestMapping(method = RequestMethod.PUT, value = "/topics/{id}")
 	public void updateTopic(@RequestBody Topic topic, @PathVariable String id) {
 		topicService.updateTopic(topic, id);
+	}
+	
+	@RequestMapping(method =RequestMethod.DELETE ,value = "/topics/{id}")
+	public Topic deleteTopic(@PathVariable String id) {
+		return topicService.deleteTopic(id);
 	}
 
 }
